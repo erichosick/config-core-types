@@ -28,7 +28,7 @@ jobs:
     - run: yarn run report-coverage
 
   bump-version:
-    name: "Bump Version on master"
+    name: "Bump Version on main"
     runs-on: ubuntu-latest
     needs: test-on-ubuntu
 
