@@ -27,15 +27,16 @@ jobs:
         CI: true
     - run: yarn run report-coverage
 
-    # Create key here https://codecov.io
-    # Add CODECOV_TOKEN to Github Secret: 
-    # https://github.com/${organization}/${repository}/settings/secrets
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./coverage.lcov
-        fail_ci_if_error: true
+    # disable code coverage for now.
+    # # Create key here https://codecov.io
+    # # Add CODECOV_TOKEN to Github Secret: 
+    # # https://github.com/${organization}/${repository}/settings/secrets
+    # - name: Upload coverage to Codecov
+    #   uses: codecov/codecov-action@v1
+    #   with:
+    #     token: ${{ secrets.CODECOV_TOKEN }}
+    #     file: ./coverage.lcov
+    #     fail_ci_if_error: true
 
   bump-version:
     name: "Bump Version on main"
