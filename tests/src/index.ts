@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { ISourceType, IConfigSource, IConfigEnvironment } from '../../src/index';
+import { ISourceType, IConfigSource, IConfigContext } from '../../src/index';
 
 describe('types', () => {
   describe('ISourceType', () => {
@@ -13,15 +13,15 @@ describe('types', () => {
     });
   });
 
-  describe('IConfigEnvironment', () => {
-    it('should expose IConfigEnvironment library correctly', () => {
-      const configEnvironment: IConfigEnvironment = {
+  describe('IConfigContext', () => {
+    it('should expose IConfigContext library correctly', () => {
+      const configEnvironment: IConfigContext = {
         platform: 'testing',
         compute: 'interface',
         environment: 'testing',
       };
 
-      expect(configEnvironment, 'should be an IConfigEnvironment').to.be.an('object');
+      expect(configEnvironment, 'should be an IConfigContext').to.be.an('object');
     });
   });
 
