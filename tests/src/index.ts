@@ -28,6 +28,7 @@ describe('types', () => {
   describe('IConfigSource', () => {
     it('should expose IConfigSource library correctly', async () => {
       class TestSource implements IConfigSource {
+        // eslint-disable-next-line class-methods-use-this
         public loadConfig(): Promise<ISourceType> {
           return new Promise<ISourceType>((resolve) => {
             resolve({
